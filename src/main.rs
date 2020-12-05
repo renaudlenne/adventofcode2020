@@ -5,6 +5,7 @@ mod ex_1_1;
 mod ex_1_2;
 mod ex_2_1;
 mod ex_2_2;
+mod ex_3_1;
 
 fn main() {
   let args: Vec<String> = env::args().skip(1).collect();
@@ -14,6 +15,7 @@ fn main() {
       "1-2" => ex_1_2::run(exercise_args),
       "2-1" => ex_2_1::run(exercise_args),
       "2-2" => ex_2_2::run(exercise_args),
+      "3-1" => ex_3_1::run(exercise_args),
       _ => println!("Unknown exercise {}", exercise_nb)
     }
   }
