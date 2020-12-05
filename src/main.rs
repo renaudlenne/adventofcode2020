@@ -3,6 +3,8 @@ use std::env;
 mod utils;
 mod ex_1_1;
 mod ex_1_2;
+mod ex_2_1;
+mod ex_2_2;
 
 fn main() {
   let args: Vec<String> = env::args().skip(1).collect();
@@ -10,6 +12,8 @@ fn main() {
     match exercise_nb.as_str() {
       "1-1" => ex_1_1::run(exercise_args),
       "1-2" => ex_1_2::run(exercise_args),
+      "2-1" => ex_2_1::run(exercise_args),
+      "2-2" => ex_2_2::run(exercise_args),
       _ => println!("Unknown exercise {}", exercise_nb)
     }
   }
